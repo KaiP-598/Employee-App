@@ -55,7 +55,7 @@ class NetworkService: NetworkServicing{
     /// - parameter completionHandler: handler containing employee object and network result.
     func getEmployeeDetailById(id: Int, completionHandler: @escaping (Employee?, NetworkError) -> ()) {
         
-        Alamofire.request(EMPLOYEES_END_POINT + "/d" + String(id)).responseJSON { response in
+        Alamofire.request(EMPLOYEES_END_POINT + "/" + String(id)).responseJSON { response in
             guard let data = response.data else {
                 completionHandler(nil, .failure)
                 return
