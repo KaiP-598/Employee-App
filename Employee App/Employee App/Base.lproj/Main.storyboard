@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8s-YB-9AR">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Employees View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EmployeesViewController" customModule="Employee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-qF-dKo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CCw-qF-dKo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4lb-pL-39H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CCw-qF-dKo" secondAttribute="trailing" id="QVe-1H-EOo"/>
+                            <constraint firstItem="CCw-qF-dKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TGb-1K-E2i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CCw-qF-dKo" secondAttribute="bottom" id="pHn-2A-Gg7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Lji-Ru-RkB"/>
+                    <connections>
+                        <outlet property="employeeTableView" destination="CCw-qF-dKo" id="55J-S9-J4Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="830" y="-595"/>
+        </scene>
+        <!--Employee Detail View Controller-->
+        <scene sceneID="CDz-Wi-unl">
+            <objects>
+                <viewController storyboardIdentifier="EmployeeDetailViewController" id="bhH-8U-QPQ" customClass="EmployeeDetailViewController" customModule="Employee_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6CI-9d-iaw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pnt-T1-8rH">
+                                <rect key="frame" x="0.0" y="124" width="414" height="658"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pnt-T1-8rH" firstAttribute="top" secondItem="2sI-g2-y6z" secondAttribute="top" constant="80" id="AXu-ad-mcH"/>
+                            <constraint firstItem="2sI-g2-y6z" firstAttribute="bottom" secondItem="Pnt-T1-8rH" secondAttribute="bottom" constant="80" id="LZW-zM-vYy"/>
+                            <constraint firstItem="2sI-g2-y6z" firstAttribute="trailing" secondItem="Pnt-T1-8rH" secondAttribute="trailing" id="iYF-NJ-sUn"/>
+                            <constraint firstItem="Pnt-T1-8rH" firstAttribute="leading" secondItem="2sI-g2-y6z" secondAttribute="leading" id="ld4-bI-ahE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2sI-g2-y6z"/>
+                    </view>
+                    <connections>
+                        <outlet property="employeePhotoImageView" destination="Pnt-T1-8rH" id="SnE-Li-34Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2T-RC-Fz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="-595"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LtZ-i5-rTj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b8s-YB-9AR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QXz-Sq-zlX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="I0r-Oj-Xh6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qi6-dF-SSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75.362318840579718" y="-594.64285714285711"/>
         </scene>
     </scenes>
 </document>

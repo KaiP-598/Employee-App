@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeTableViewCell" id="KGk-i7-Jjw" customClass="EmployeeTableViewCell" customModule="Employee_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vfq-aG-Reo">
+                        <rect key="frame" x="84" y="4" width="232" height="71.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-xk-m5q">
+                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="18.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-dT-qXz">
+                                <rect key="frame" x="0.0" y="26.5" width="26.5" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqR-nT-EIo">
+                                <rect key="frame" x="0.0" y="53" width="26.5" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvi-rx-J9S">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="79.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="KRu-ZP-9DT"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vfq-aG-Reo" secondAttribute="trailing" constant="4" id="0rn-yZ-wh1"/>
+                    <constraint firstAttribute="bottom" secondItem="vfq-aG-Reo" secondAttribute="bottom" constant="4" id="4m6-7V-kLI"/>
+                    <constraint firstItem="vfq-aG-Reo" firstAttribute="leading" secondItem="Tvi-rx-J9S" secondAttribute="trailing" constant="4" id="DVp-5G-A8j"/>
+                    <constraint firstItem="vfq-aG-Reo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="JsQ-1I-5ME"/>
+                    <constraint firstItem="Tvi-rx-J9S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cft-CZ-YsF"/>
+                    <constraint firstAttribute="bottom" secondItem="Tvi-rx-J9S" secondAttribute="bottom" id="eeg-XG-MOb"/>
+                    <constraint firstItem="Tvi-rx-J9S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kjn-CV-1hx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="employeeBirthDateLabel" destination="ZqR-nT-EIo" id="f4y-6Z-37N"/>
+                <outlet property="employeeGenderLabel" destination="3f5-dT-qXz" id="uWs-4R-luP"/>
+                <outlet property="employeeNameLabel" destination="zEO-xk-m5q" id="Frf-3g-E55"/>
+                <outlet property="employeePhotoImageView" destination="Tvi-rx-J9S" id="BVO-CE-g05"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
